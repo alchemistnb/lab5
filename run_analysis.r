@@ -1,4 +1,3 @@
-```{r}
 testSubjectPath <- "./UCI_HAR_Dataset/test/subject_test.txt"
 testXPath <- "./UCI_HAR_Dataset/test/X_test.txt"
 testYPath <- "./UCI_HAR_Dataset/test/Y_test.txt"
@@ -41,4 +40,3 @@ mergedDataFrame <- cbind(fullSubjectDataFrame, namedYDataFrame, filteredXDataFra
 tidyDataset <- data.frame(mergedDataFrame %>% group_by(subject, activity) %>% summarise_all(funs(mean)))
 
 write.table(tidyDataset, "tidy_dataset.txt", row.names=FALSE)
-```
